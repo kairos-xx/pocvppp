@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VPP Dashboard</title>
+    <meta name="description" content="VPP Dashboards">
+    <meta name="author" content="Closer Consulting">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/toggle.css">
+</head>
+
+<body>
+    <div id="overlayer"></div>
+    <span class="loader">
+        <span class="loader-inner"></span>
+    </span>
+    <div class="container">
+        <div class="header">
+            <img src="css/logo.png" class="logo"></img>
+            <div class="time-view">
+                <div class="time-title">View:</div>
+                <div class="title-switch top-switch">
+                    <label class="switch">
+                        <input type="checkbox" class="switch-input" checked id="timeframe">
+                        <span class="switch-label" data-on="24H" data-off="48H"></span>
+                        <span class="switch-handle"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="graph">
+                <div class="title" id="b01">
+                    <div class="title-text">Building 1</div>
+                    <div class="title-switch">
+                        <label class="switch">
+                            <input type="checkbox" class="switch-input" checked id="b01s">
+                            <span class="switch-label" data-on="YES" data-off="NO"></span>
+                            <span class="switch-handle"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="graph-circular" id="b01a"></div>
+                <div class="graph-circular" id="b01b"></div>
+                <div class="graph-circular" id="b01c"></div>
+                <div class="graph-circular" id="b01d"></div>
+            </div>
+            <div class="graph">
+                <div class="title" id="b02">
+                    <div class="title-text">Building 2</div>
+                    <div class="title-switch">
+                        <label class="switch">
+                            <input type="checkbox" class="switch-input" checked id="b02s">
+                            <span class="switch-label" data-on="YES" data-off="NO"></span>
+                            <span class="switch-handle"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="graph-circular" id="b02a"></div>
+                <div class="graph-circular" id="b02b"></div>
+                <div class="graph-circular" id="b02c"></div>
+                <div class="graph-circular" id="b02d"></div>
+            </div>
+            <div class="graph">
+                <div class="title" id="b03">
+                    <div class="title-text">Building 3</div>
+                    <div class="title-switch">
+                        <label class="switch">
+                            <input type="checkbox" class="switch-input" checked id="b03s">
+                            <span class="switch-label" data-on="YES" data-off="NO"></span>
+                            <span class="switch-handle"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="graph-circular" id="b03a"></div>
+                <div class="graph-circular" id="b03b"></div>
+                <div class="graph-circular" id="b03c"></div>
+                <div class="graph-circular" id="b03d"></div>
+            </div>
+            <div class="graph">
+                <div class="title" id="b04">
+                    <div class="title-text">Building 4</div>
+                    <div class="title-switch">
+                        <label class="switch">
+                            <input type="checkbox" class="switch-input" checked id="b04s">
+                            <span class="switch-label" data-on="YES" data-off="NO"></span>
+                            <span class="switch-handle"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="graph-circular" id="b04a"></div>
+                <div class="graph-circular" id="b04b"></div>
+                <div class="graph-circular" id="b04c"></div>
+                <div class="graph-circular" id="b04d"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="bar">
+                <div class="graph-bar" id="ta">
+                    <canvas id="bar0"></canvas>
+                    <div class="graph-bar-subtitle" id="bar0Subtitle">2.5</div>
+                </div>
+                <div class="graph-bar" id="tb">
+                    <canvas id="bar1"></canvas>
+                    <div class="graph-bar-subtitle" id="bar1Subtitle">2.4</div>
+                </div>
+                <div class="graph-bar" id="tc">
+                    <canvas id="bar2"></canvas>
+                    <div class="graph-bar-subtitle" id="bar2Subtitle">2.3</div>
+                </div>
+                <div class="graph-bar" id="td">
+                    <canvas id="bar3"></canvas>
+                    <div class="graph-bar-subtitle" id="bar3Subtitle">2.2</div>
+                </div>
+            </div>
+            <div class="saving">
+                <div class="global-switch">
+                    <div class="global-switch-title">Global:</div>
+                    <label class="switch">
+                        <input type="checkbox" class="switch-input" checked id="globalswitch">
+                        <span class="switch-label" data-on="YES" data-off="NO"></span>
+                        <span class="switch-handle"></span>
+                    </label>
+                </div>
+                <div class="potencial-saving">
+                    <div class="potencial-saving-title">Potential Total Saving:</div>
+                    <div class="potencial-saving-value" id="potencial-saving-value">4.4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bonsai.min.js"></script>
+    <script src="js/code.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/purl.js"></script>
+</body>
+
+</html>

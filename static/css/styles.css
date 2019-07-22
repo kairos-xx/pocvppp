@@ -1,0 +1,420 @@
+@font-face {
+    font-family: 'edp_preonthin';
+    src: url('edppreonthin-webfont.woff2') format('woff2'),
+        url('edppreonthin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'edp_preonregular';
+    src: url('edppreonregular-webfont.woff2') format('woff2'),
+        url('edppreonregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    background-color: #303030;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'edp_preonregular';
+}
+
+#overlayer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background: #4a4a4a;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 3;
+    border: 4px solid #Fff;
+    top: 50%;
+    animation: loader 2s infinite ease;
+    left: calc(50% - 15px);
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    75% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+.container {
+    display: inline-block;
+    float: left;
+    width: calc(100% - (24px * 2));
+    height: calc(100% - (24px * 2));
+    margin: 24px;
+}
+
+.container .header {
+    color: #FFF;
+    float: left;
+    width: 100%;
+    /*height: 156px;*/
+    margin-bottom: 10px;
+    display: inline-flex;
+}
+
+.container .header .logo {
+    float: left;
+    width: 541px;
+    max-width: 100%;
+    /*display: block;*/
+    height: auto;
+    padding-right: 20px;
+    object-fit: contain;
+    height: 100%;
+    /* background-position: 50% 50%; */
+}
+
+.container .header .time-view {
+    float: left;
+    width: calc(100% - 541px);
+    border-left: red 1px solid;
+    height: auto;
+    padding-left: 20px;
+    margin: 10px 0px;
+}
+
+.container .header .time-view .time-title {
+    font-size: 12px;
+    margin-left: 9px;
+    margin-top: 2px;
+    margin-bottom: -20px;
+    color: #ccc
+}
+
+.container .body {
+    color: #FFF;
+    float: left;
+    width: 100%;
+    height: calc(100% - 266px - 156px);
+    box-sizing: border-box;
+}
+
+.container .body .graph {
+    float: left;
+    width: calc(100% / 4 - (10px * 2));
+    height: calc(100% - 20px * 2);
+    margin-right: 26.6px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #060606;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container .body .graph:last-child {
+    margin-right: 0px;
+}
+
+.container .body .graph .title {
+    width: 100%;
+    height: 40px;
+    float: left;
+    display: inline-block;
+}
+
+.container .body .graph .title .title-text {
+    float: left;
+}
+
+.container .body .graph .title .title-switch {
+    width: 50px;
+    float: right;
+}
+
+#b01 {
+    border-bottom: 1px solid #ff931e;
+    color: #ff931e;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+#b02 {
+    border-bottom: 1px solid #ff3dff;
+    color: #ff3dff;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+#b03 {
+    border-bottom: 1px solid #7ac943;
+    color: #7ac943;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+#b04 {
+    border-bottom: 1px solid #55c4c4;
+    color: #55c4c4;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.container .body .graph .graph-circular {
+    margin: 2px;
+    float: left;
+    width: calc((100% / 2) - 4px);
+    height: calc((100% / 2) - 4px - 15px);
+    position: relative;
+}
+
+.container .body .graph .graph-circular>div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container .body .graph .graph-circular>div svg {
+    width: 100%;
+    height: 90%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -40%);
+}
+
+.container .footer {
+    color: #FFF;
+    width: 100%;
+    height: 266px;
+    float: left;
+    background-color: #464646;
+}
+
+.container .footer .graph {
+    float: left;
+    width: calc(100% - (100% / 4 - (10px * 2)));
+    height: 100%;
+}
+
+.container .footer .graph .graph-circular {
+    position: relative;
+    width: calc((100% / 4) - 10px);
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 100%;
+    float: left;
+}
+
+.container .footer .graph .graph-circular svg {
+    width: 80%;
+    height: 80%;
+}
+
+.container .footer .saving {
+    float: right;
+    width: calc(100% / 4 - (10px * 2));
+    height: 100%;
+    position: relative;
+}
+
+.container .footer .saving .global-switch {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 90%;
+    height: 50px;
+    background-color: #232323;
+}
+
+.container .footer .saving .potencial-saving {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 90%;
+    height: 50%;
+    background-color: #232323;
+}
+
+gearbox-hud {
+    position: absolute !important;
+    bottom: 13% !important;
+    right: 5% !important;
+    height: 50% !important;
+    width: 90% !important;
+    z-index: 9999 !important;
+    pointer-events: none !important;
+}
+
+gearbox-hud {
+    transition-property: opacity !important;
+    transition-duration: 1s !important;
+}
+
+gearbox-hud {
+    opacity: 0 !important;
+}
+
+gearbox-hud.gbx-recently-active {
+    opacity: 1 !important;
+}
+
+/*
+CHART
+*/
+@keyframes chartjs-render-animation {
+    from {
+        opacity: .99
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.chartjs-render-monitor {
+    animation: chartjs-render-animation 1ms
+}
+
+.chartjs-size-monitor,
+.chartjs-size-monitor-expand,
+.chartjs-size-monitor-shrink {
+    position: absolute;
+    direction: ltr;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: -1
+}
+
+.chartjs-size-monitor-expand>div {
+    position: absolute;
+    width: 1000000px;
+    height: 1000000px;
+    left: 0;
+    top: 0
+}
+
+.chartjs-size-monitor-shrink>div {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0
+}
+
+.graph-bar {
+    width: 100%;
+    height: 75%;
+    padding: 20px;
+    box-sizing: content-box;
+}
+
+.bar {
+    display: inline-flex;
+    height: inherit;
+    width: 75%;
+}
+
+.graph-bar canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.graph-bar-subtitle {
+    height: 25%;
+    line-height: 48px;
+    font-size: 22px;
+    text-align: center;
+    color: rgb(41, 171, 226);
+    margin-left: 28%;
+}
+
+.graph-bar-subtitle::after {
+    font-size: 12px;
+    content: " kW";
+}
+
+.global-switch-title {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 17px;
+    font-size: 12px;
+    float: left;
+    font-family: edp_preonthin;
+}
+
+.potencial-saving-value {
+    font-size: 55px;
+    margin-left: 20px;
+    font-size: calc(2vw + 2vh);
+    color: rgb(41, 171, 226);
+}
+
+.potencial-saving-value::after {
+    font-size: 24px;
+    font-size: calc(1vw + 1vh);
+    content: " kW";
+}
+
+.potencial-saving-title {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: edp_preonthin;
+}
